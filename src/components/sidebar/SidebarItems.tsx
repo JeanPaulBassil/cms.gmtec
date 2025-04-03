@@ -50,6 +50,12 @@ const baseItems: SidebarItem[] = [
     icon: 'solar:home-2-linear',
     title: 'Home',
   },
+  {
+    key: 'applications',
+    href: ROUTES.APPLICATIONS,
+    icon: 'solar:document-text-linear',
+    title: 'Applications',
+  },
   // {
   //   key: 'floor-plan',
   //   href: ROUTES.FLOOR_PLAN,

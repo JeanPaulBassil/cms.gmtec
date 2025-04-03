@@ -3,7 +3,7 @@ import { FloorType } from '@/types/floor';
 // Default colors for each floor type
 export const defaultFloorColors: Record<FloorType, string> = {
   indoor: '#E3F2FD', // Light blue
-  outdoor: '#EFF6FF', // Light blue
+  outdoor: '#D6EAF8', // Light Gemtec blue
   bar: '#FCE4EC', // Light pink
   custom: '#FFF3E0', // Light orange
 };

@@ -15,10 +15,40 @@ export const sidebarItems: SidebarItem[] = [
     title: 'Overview',
     items: [
       {
-        key: 'dashboard',
-        href: '/dashboard',
-        icon: 'solar:home-linear',
-        title: 'Dashboard',
+        key: 'applications',
+        href: '/applications',
+        icon: 'solar:document-text-linear',
+        title: 'Applications',
+      },
+      {
+        key: 'quotes',
+        href: '/quotes',
+        icon: 'solar:tag-price-linear',
+        title: 'Quote Requests',
+      },
+      {
+        key: 'job-offerings',
+        href: '/job-offerings',
+        icon: 'solar:document-add-linear',
+        title: 'Job Offerings',
+      },
+      {
+        key: 'requirements',
+        href: '/requirements',
+        icon: 'solar:checklist-linear',
+        title: 'Requirements',
+      },
+      {
+        key: 'contact-messages',
+        href: '/contact-messages',
+        icon: 'solar:chat-round-dots-linear',
+        title: 'Contact Messages',
+      },
+      {
+        key: 'resumes',
+        href: '/resumes',
+        icon: 'solar:file-text-linear',
+        title: 'Resumes',
       }
     ],
   },
@@ -56,13 +86,15 @@ export default function AppWrapper() {
     <div className="h-full min-h-[48rem] relative">
       {/* Sidebar container with dynamic width */}
       <div
-        className={`relative flex h-full flex-1 flex-col bg-[#3B82F6] transition-all duration-300 ease-in-out ${
+        className={`relative flex h-full flex-1 flex-col bg-[#0070BA] transition-all duration-300 ease-in-out ${
           isSidebarOpen ? 'w-72 p-6' : 'w-0 p-0 overflow-hidden'
         }`}
       >
         {/* Header with logo */}
-        <div className="flex items-center gap-2 px-2 mb-2">
-          <Image src="/Gemtec logo.png" alt="Gemtec logo" width={isSidebarOpen ? 200 : 0} height={100} />
+        <div className="flex items-center justify-center mb-4 px-2">
+          <div className="bg-white px-3 py-2 rounded-lg shadow-sm inline-block" style={{ width: '140px', height: '90px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Image src="/Gemtec logo.png" alt="Gemtec logo" width={isSidebarOpen ? 170 : 0} height={85} className="object-contain" />
+          </div>
         </div>
 
         {/* Sidebar content */}
@@ -104,7 +136,7 @@ export default function AppWrapper() {
           left: isSidebarOpen ? '18rem' : '0', // Using style for smooth transition
           transition: 'left 0.3s ease-in-out, background-color 0.2s',
         }}
-        className={`absolute top-1/2 -translate-y-1/2 z-20 bg-[#3B82F6] text-white shadow-md hover:bg-[#2563EB] hover:shadow-lg h-10 w-6 p-0 min-w-0 rounded-r-md ${
+        className={`absolute top-1/2 -translate-y-1/2 z-20 bg-[#0070BA] text-white shadow-md hover:bg-[#0095DA] hover:shadow-lg h-10 w-6 p-0 min-w-0 rounded-r-md ${
           isSidebarOpen ? 'border-l border-white/20' : ''
         }`}
       >
