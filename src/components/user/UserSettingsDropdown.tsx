@@ -16,7 +16,6 @@ import { logout } from '@/services/authService';
 import { useAuth } from '@/components/providers/AuthProvider';
 import SkeletonText from '@/components/ui/SkeletonText';
 import LogoutModal from '@/components/sidebar/LogoutModal';
-import SettingsModal from '@/components/sidebar/SettingsModal';
 
 interface UserSettingsDropdownProps {
   variant?: 'sidebar' | 'header';
@@ -28,15 +27,12 @@ export default function UserSettingsDropdown({
   className = ''
 }: UserSettingsDropdownProps) {
   const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
-  const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const { user, isInitializing } = useAuth();
   const router = useRouter();
 
   const handleLogoutModalClose = () => setIsLogoutModalOpen(false);
-  const handleSettingsModalClose = () => setIsSettingsModalOpen(false);
 
   const handleLogoutModalOpen = () => setIsLogoutModalOpen(true);
-  const handleSettingsModalOpen = () => setIsSettingsModalOpen(true);
 
   const handleLogoutConfirm = async () => {
     try {
@@ -136,15 +132,6 @@ export default function UserSettingsDropdown({
               My Plan
             </DropdownItem>
           </DropdownSection>
-          <DropdownSection showDivider aria-label="profile-section-2">
-            <DropdownItem
-              key="settings"
-              className="py-[4px] text-default-500"
-              onPress={handleSettingsModalOpen}
-            >
-              Settings
-            </DropdownItem>
-          </DropdownSection>
           <DropdownSection aria-label="profile-section-3" className="mb-0">
             <DropdownItem
               key="help-and-feedback"
@@ -170,8 +157,6 @@ export default function UserSettingsDropdown({
         onClose={handleLogoutModalClose}
         onConfirm={handleLogoutConfirm}
       />
-
-      <SettingsModal isOpen={isSettingsModalOpen} onClose={handleSettingsModalClose} />
     </>
   );
 } 

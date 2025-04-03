@@ -3,7 +3,7 @@ import { FloorType } from '@/types/floor';
 // Default colors for each floor type
 export const defaultFloorColors: Record<FloorType, string> = {
   indoor: '#E3F2FD', // Light blue
-  outdoor: '#E8F5E9', // Light green
+  outdoor: '#EFF6FF', // Light blue
   bar: '#FCE4EC', // Light pink
   custom: '#FFF3E0', // Light orange
 };

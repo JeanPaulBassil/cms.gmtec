@@ -56,13 +56,13 @@ export default function AppWrapper() {
     <div className="h-full min-h-[48rem] relative">
       {/* Sidebar container with dynamic width */}
       <div
-        className={`relative flex h-full flex-1 flex-col bg-[#75CAA6] transition-all duration-300 ease-in-out ${
+        className={`relative flex h-full flex-1 flex-col bg-[#3B82F6] transition-all duration-300 ease-in-out ${
           isSidebarOpen ? 'w-72 p-6' : 'w-0 p-0 overflow-hidden'
         }`}
       >
         {/* Header with logo */}
         <div className="flex items-center gap-2 px-2 mb-2">
-          <Image src="/logo.svg" alt="logo" width={isSidebarOpen ? 200 : 0} height={100} />
+          <Image src="/Gemtec logo.png" alt="Gemtec logo" width={isSidebarOpen ? 200 : 0} height={100} />
         </div>
 
         {/* Sidebar content */}
@@ -104,7 +104,7 @@ export default function AppWrapper() {
           left: isSidebarOpen ? '18rem' : '0', // Using style for smooth transition
           transition: 'left 0.3s ease-in-out, background-color 0.2s',
         }}
-        className={`absolute top-1/2 -translate-y-1/2 z-20 bg-[#75CAA6] text-white shadow-md hover:bg-[#5fb992] hover:shadow-lg h-10 w-6 p-0 min-w-0 rounded-r-md ${
+        className={`absolute top-1/2 -translate-y-1/2 z-20 bg-[#3B82F6] text-white shadow-md hover:bg-[#2563EB] hover:shadow-lg h-10 w-6 p-0 min-w-0 rounded-r-md ${
           isSidebarOpen ? 'border-l border-white/20' : ''
         }`}
       >
